@@ -1,11 +1,14 @@
-/terraform 
+## terraform 
 ```
 terraform plan
 terraform apply -auto-approve
 ```
 
-kubectl
+## kubectl
 ```
 export KUBECONFIG=/tmp/config
+```
+### test:
+```
 kubectl get nodes
 ```
