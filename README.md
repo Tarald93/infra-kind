@@ -12,3 +12,7 @@ export KUBECONFIG=/tmp/config
 ```
 kubectl get nodes
 ```
+## Cleanup:
+```
+terraform destroy -auto-approve
+```
