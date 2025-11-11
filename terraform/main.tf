@@ -1,12 +1,12 @@
 resource "kind_cluster" "default" {
-    name            = "test-cluster"
-    node_image      = "kindest/node:v1.34.0"
-    kubeconfig_path = pathexpand("/tmp/config")
+    name            = var.cluster_name
+    node_image      = var.cluster_node_image
+    kubeconfig_path = pathexpand("${var.kube_config_path}")
     wait_for_ready  = true
 
     kind_config {
       kind        = "Cluster"
-      api_version = "kind.x-k8s.io/v1alpha4"
+      api_version = var.kind_api_version
     
     node {
           role = "control-plane"
